@@ -5,6 +5,13 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryArchiveAndSalesPlatform.API", "LibraryArchiveAndSalesPlatform.API\LibraryArchiveAndSalesPlatform.API.csproj", "{113FCCC9-8985-4ABE-BAD7-50E8DED132CD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{9E8FD813-012E-429E-A904-BBE7229770D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{C8A93008-A06B-44A2-A4CF-2EF72A8360A8}"
+	ProjectSection(SolutionItems) = preProject
+		deploy.yml = deploy.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +25,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C8A93008-A06B-44A2-A4CF-2EF72A8360A8} = {9E8FD813-012E-429E-A904-BBE7229770D0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {94650142-716B-4A53-A61F-F191881C5312}
