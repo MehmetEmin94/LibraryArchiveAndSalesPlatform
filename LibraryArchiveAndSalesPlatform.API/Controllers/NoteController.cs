@@ -88,24 +88,6 @@ namespace LibraryArchiveAndSalesPlatform.API.Controllers
             }
         }
 
-        [HttpGet("share/{noteId}")]
-        public async Task<IActionResult> ShareNote([FromRoute] Guid noteId,[FromBody] List<string> users)
-        {
-            try
-            {
-                await noteAppService.ShareNoteAsync(noteId, users);
-            }
-            catch (ArgumentNullException ex)
-            {
-                return NotFound(ex);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex);
-            }
-
-            return Ok();
-        }
 
         [HttpGet("change-note-privacy/{noteId}")]
         public async Task<IActionResult> ChangeNotePrivacy([FromRoute] Guid noteId, [FromQuery] PrivacySetting privacySetting)

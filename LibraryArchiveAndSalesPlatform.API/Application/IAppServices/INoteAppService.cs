@@ -12,7 +12,6 @@ namespace LibraryArchiveAndSalesPlatform.API.Application.IAppServices
         Task DeleteAsync(Guid id);
         Task<NoteDto> GetAsync(Guid id);
         Task<List<NoteDto>> GetAllAsync(QueryObject query);
-        Task ShareNoteAsync(Guid noteId, List<string> users);
         Task ChangeNotePrivacyAsync(Guid noteId, PrivacySetting privacySetting);
     }
 }

@@ -16,9 +16,8 @@ namespace LibraryArchiveAndSalesPlatform.API.Application.AppServices
         (
            IUnitOfWork unitOfWork, IMapper _mapper, 
            IUserService userService, 
-           EmailProducer _emailProducer,
            UserManager<User> userManager,
-           Logger<NoteAppService> _logger,
+           ILogger<NoteAppService> _logger,
            IValidator<CreateNoteDto> _createValidator,
            IValidator<UpdateNoteDto> _updateValidator
         ) 
@@ -96,28 +95,6 @@ namespace LibraryArchiveAndSalesPlatform.API.Application.AppServices
             return _mapper.Map<NoteDto>(note);
         }
 
-        public async Task ShareNoteAsync(Guid noteId, List<string> users)
-        {
-            var note = await unitOfWork.NoteRepository.GetAsync(noteId);
-
-            if (note is null)
-                throw new ArgumentNullException("No note found with the given Id: {noteId}", noteId.ToString());
-
-            foreach (var userName in users)
-            {
-                var user = await userManager.FindByNameAsync(userName);
-                if (user is null)
-                    throw new ArgumentNullException("No user found with the given username: {userName}", userName);
-
-                _emailProducer.PublishEmailRequest(new EmailMessage
-                {
-                    ToEmail = user.Email,
-                    Subject = note.Title,
-                    Body = note.Content
-                });
-            }
-            
-        }
 
         public async Task UpdateAsync(Guid id,UpdateNoteDto noteDto)
         {

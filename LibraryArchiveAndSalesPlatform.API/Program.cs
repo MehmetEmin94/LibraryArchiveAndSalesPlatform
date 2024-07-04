@@ -30,13 +30,6 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 #endregion
 
 
-#region Application Services di
-builder.Services.AddScoped<IUserAppService, UserAppService>();
-builder.Services.AddScoped<IBookAppService, BookAppService>();
-builder.Services.AddScoped<INoteAppService, NoteAppService>();
-builder.Services.AddScoped<IShelfAppService, ShelfAppService>();
-#endregion
-
 #region other services
 builder.Services.AddScoped<ISaveChangesInterceptor, EntityInterceptor>();
 builder.Services.AddScoped<IUserService, UserService>();
@@ -49,11 +42,14 @@ builder.Services.AddControllers().AddNewtonsoftJson(options => {
 });
 #endregion
 
-#region mail sender
-builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
-builder.Services.AddSingleton<EmailProducer>();
-builder.Services.AddHostedService<EmailConsumer>();
+#region Application Services di
+builder.Services.AddScoped<IUserAppService, UserAppService>();
+builder.Services.AddScoped<IBookAppService, BookAppService>();
+builder.Services.AddScoped<INoteAppService, NoteAppService>();
+builder.Services.AddScoped<IShelfAppService, ShelfAppService>();
 #endregion
+
+
 
 
 #region Context
