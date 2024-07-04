@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  libraryarchiveandsalesplatform.api:
+    image: ${DOCKER_REGISTRY-}libraryarchiveandsalesplatformapi
+    build:
+      context: .
+      dockerfile: LibraryArchiveAndSalesPlatform.API/Dockerfile
