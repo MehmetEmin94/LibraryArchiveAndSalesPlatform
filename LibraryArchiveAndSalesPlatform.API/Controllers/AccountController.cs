@@ -1,10 +1,7 @@
 ﻿using LibraryArchiveAndSalesPlatform.API.Application.Dtos.Account;
 using LibraryArchiveAndSalesPlatform.API.Application.IAppServices;
-using LibraryArchiveAndSalesPlatform.API.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
 
 namespace LibraryArchiveAndSalesPlatform.API.Controllers
 {
