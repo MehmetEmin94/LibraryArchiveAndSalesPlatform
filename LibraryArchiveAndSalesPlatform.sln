@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryArchiveAndSalesPlatform.API", "LibraryArchiveAndSalesPlatform.API\LibraryArchiveAndSalesPlatform.API.csproj", "{113FCCC9-8985-4ABE-BAD7-50E8DED132CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{113FCCC9-8985-4ABE-BAD7-50E8DED132CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{113FCCC9-8985-4ABE-BAD7-50E8DED132CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{113FCCC9-8985-4ABE-BAD7-50E8DED132CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{113FCCC9-8985-4ABE-BAD7-50E8DED132CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94650142-716B-4A53-A61F-F191881C5312}
+	EndGlobalSection
+EndGlobal

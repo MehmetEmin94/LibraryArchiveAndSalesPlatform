@@ -1,0 +1,6 @@
+@LibraryArchiveAndSalesPlatform.API_HostAddress = http://localhost:5249
+
+GET {{LibraryArchiveAndSalesPlatform.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
