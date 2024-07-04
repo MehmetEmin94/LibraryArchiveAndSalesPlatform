@@ -10,7 +10,6 @@ namespace LibraryArchiveAndSalesPlatform.API.Controllers
 {
     [Route("api/accounts")]
     [ApiController]
-    [Authorize]
     public class AccountController(IUserAppService userService) : ControllerBase
     {
 
