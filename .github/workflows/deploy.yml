@@ -1,4 +1,4 @@
-name: Deploy .NET API
+name: Deploy to Netlify
 
 on:
   push:
@@ -6,26 +6,28 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          dotnet-version: '8.0.202'
+          node-version: '14'  # Adjust based on your project requirements
 
-      - name: Restore dependencies
-        run: dotnet restore
+      - name: Install dependencies
+        run: npm install
 
-      - name: Build
-        run: dotnet build --configuration Release --no-restore
+      - name: Build project
+        run: npm run build  # Adjust based on your project's build command
 
-      - name: Publish
-        run: dotnet publish -c Release -o out
-
-      - name: Deploy to Hosting Platform
-        run: echo "This is a placeholder for deployment script."
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}  # Add this in GitHub secrets
+        run: |
+          npm install -g netlify-cli
+          netlify deploy --dir=dist --prod  # Adjust `--dir` to your build output directory
