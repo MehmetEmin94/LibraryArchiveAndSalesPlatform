@@ -5,7 +5,6 @@ using LibraryArchiveAndSalesPlatform.API.BuildingBlocks.CustomExceptions;
 using LibraryArchiveAndSalesPlatform.API.Domain.Models;
 using Microsoft.AspNetCore.Identity;
 using FluentValidation;
-using LibraryArchiveAndSalesPlatform.API.Application.Dtos.Book;
 
 namespace LibraryArchiveAndSalesPlatform.API.Application.AppServices
 {

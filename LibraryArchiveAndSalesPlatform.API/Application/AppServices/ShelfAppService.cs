@@ -1,14 +1,9 @@
 ﻿using AutoMapper;
 using FluentValidation;
-using LibraryArchiveAndSalesPlatform.API.Application.Dtos.Book;
 using LibraryArchiveAndSalesPlatform.API.Application.Dtos.Shelf;
 using LibraryArchiveAndSalesPlatform.API.Application.IAppServices;
-using LibraryArchiveAndSalesPlatform.API.BuildingBlocks;
 using LibraryArchiveAndSalesPlatform.API.Domain.Models;
 using LibraryArchiveAndSalesPlatform.API.Infrastructure;
-using LibraryArchiveAndSalesPlatform.API.Infrastructure.IRepositories;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
-using static System.Reflection.Metadata.BlobBuilder;
 
 namespace LibraryArchiveAndSalesPlatform.API.Application.AppServices
 {
@@ -16,7 +11,7 @@ namespace LibraryArchiveAndSalesPlatform.API.Application.AppServices
         (
            IUnitOfWork unitOfWork, 
            IMapper _mapper,
-           ILogger<BookAppService> _logger,
+           ILogger<ShelfAppService> _logger,
            IValidator<CreateShelfDto> _createValidator,
            IValidator<UpdateShelfDto> _updateValidator
         ) : IShelfAppService
