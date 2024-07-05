@@ -4,7 +4,6 @@ using LibraryArchiveAndSalesPlatform.API.Application.Dtos.Note;
 using LibraryArchiveAndSalesPlatform.API.Application.IAppServices;
 using LibraryArchiveAndSalesPlatform.API.BuildingBlocks.Filters;
 using LibraryArchiveAndSalesPlatform.API.BuildingBlocks.IServices;
-using LibraryArchiveAndSalesPlatform.API.BuildingBlocks.Services;
 using LibraryArchiveAndSalesPlatform.API.Domain.Enums;
 using LibraryArchiveAndSalesPlatform.API.Domain.Models;
 using LibraryArchiveAndSalesPlatform.API.Infrastructure;
